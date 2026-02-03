@@ -26,7 +26,10 @@ int main(){
 //O Produto Interno Bruto da cidade
     int ponto_turistico;
 //A quantidade de pontos turísticos na cidade
-
+    float densidadePopul;
+//Divide População por área
+    float pibPerCapita;
+//Divide PIB por população
 
 //carta 2
     char estado1[50];
@@ -43,7 +46,10 @@ int main(){
 //O Produto Interno Bruto da cidade
     int ponto_turistico1;
 //A quantidade de pontos turísticos na cidade
-
+    float densidadePopul1;
+//Divide População por área
+    float pibPerCapita1;
+//Divide PIB por população
 
 /*
 Após o usuário inserir os dados de cada carta, seu programa deve exibir na tela as informações cadastradas, de forma organizada e legível. Para cada carta, imprima cada informação em uma linha separada, com uma descrição clara.
@@ -88,10 +94,17 @@ printf("Carta 1:\n");
 printf("Estado: %s\n", estado);
 printf("Código: %s\n", codigo);
 printf("Cidade: %s\n", cidade);
-printf("População: %d\n", habitantes1);
-printf("Área: %.2f km²\n", area1);
-printf("PIB: %f bilhões\n", pib1);
+printf("População: %d\n", habitantes);
+printf("Área: %.2f km²\n", area);
+printf("PIB: %f bilhões\n", pib);
 printf("Pontos Turísticos: %d\n", ponto_turistico);
+
+densidadePopul = (float) habitantes / area;
+pibPerCapita = (pib * 1000000000) / habitantes;
+
+
+printf("Densidade populacional: %.2f\n", densidadePopul);
+printf("PIB per capita: %.2f\n", pibPerCapita);
 
 //Print valores da carta 2
 printf("Carta 2:\n");
@@ -102,6 +115,12 @@ printf("População: %d\n", habitantes1);
 printf("Área: %.2f km²\n", area1);
 printf("PIB: %f bilhões\n", pib1);
 printf("Pontos Turísticos: %d\n", ponto_turistico1);
+
+densidadePopul1 = (float) habitantes1 / area1;
+pibPerCapita1 = (pib1 * 1000000000) / habitantes1;
+
+printf("Densidade populacional: %.2f\n", densidadePopul1);
+printf("PIB per capita: %.2f\n", pibPerCapita1);
 
 return 0;
 }
