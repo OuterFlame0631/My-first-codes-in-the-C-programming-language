@@ -3,10 +3,6 @@ My-first-codes-in-the-C-programming-language
 Just my starting!
 */
 
-/*# My-first-codes-in-the-C-programming-language
-Just my starting!
-*/
-
 #include <stdio.h>
 
 int main(){
@@ -96,12 +92,11 @@ printf("Código: %s\n", codigo);
 printf("Cidade: %s\n", cidade);
 printf("População: %d\n", habitantes);
 printf("Área: %.2f km²\n", area);
-printf("PIB: %f bilhões\n", pib);
+printf("PIB: %.2f bilhões\n", pib);
 printf("Pontos Turísticos: %d\n", ponto_turistico);
 
 densidadePopul = (float) habitantes / area;
 pibPerCapita = (pib * 1000000000) / habitantes;
-
 
 printf("Densidade populacional: %.2f\n", densidadePopul);
 printf("PIB per capita: %.2f\n", pibPerCapita);
@@ -113,7 +108,7 @@ printf("Código: %s\n", codigo1);
 printf("Cidade: %s\n", cidade1);
 printf("População: %d\n", habitantes1);
 printf("Área: %.2f km²\n", area1);
-printf("PIB: %f bilhões\n", pib1);
+printf("PIB: %.2f bilhões\n", pib1);
 printf("Pontos Turísticos: %d\n", ponto_turistico1);
 
 densidadePopul1 = (float) habitantes1 / area1;
@@ -121,6 +116,32 @@ pibPerCapita1 = (pib1 * 1000000000) / habitantes1;
 
 printf("Densidade populacional: %.2f\n", densidadePopul1);
 printf("PIB per capita: %.2f\n", pibPerCapita1);
+
+printf("\n");
+
+double superPoder = ((double)habitantes + (double)area + (double)pib + (double)pibPerCapita + (double)ponto_turistico) - 
+(double)densidadePopul;
+double superPoder1 = ((double)habitantes1 + (double)area1 + (double)pib1 + (double)pibPerCapita1 + (double)ponto_turistico1) - (double)densidadePopul1;
+
+printf("Super Poder da carta 1: %.2f\n", superPoder);
+printf("Super Poder da carta 2: %.2f\n", superPoder1);
+
+printf("\n");
+
+printf("Definindo carta vencedora\n");
+printf("Resultado 1 = Carta 1 vence\n");
+printf("Resultado 0 = Carta 2 vence\n");
+
+printf("\n");
+
+printf("Comparação de cartas\n");
+printf("Mais Habitantes: %d\n", habitantes > habitantes1);
+printf("Maior Area: %d\n", area > area1);
+printf("Maior PIB: %d\n", pib > pib1);
+printf("Maior PIB Per Capita: %d\n", pibPerCapita > pibPerCapita1);
+printf("Mais Pontos Turísticos: %d\n", ponto_turistico > ponto_turistico1);
+printf("Menor Densidade Populacional: %d\n", densidadePopul < densidadePopul1);
+printf("Maior Super Poder: %d\n", superPoder > superPoder1);
 
 return 0;
 }
